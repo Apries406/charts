@@ -1,0 +1,42 @@
+{
+	"name": "chart",
+	"version": "1.0.0",
+	"main": "src/index.js",
+	"scripts": {
+		"start": "node src/index.js",
+		"test": "vitest run",
+		"build": "rimraf -rf ./dist && rollup --config rollup.config.js",
+		"prepare": "husky install"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"devDependencies": {
+		"@babel/cli": "^7.24.7",
+		"@babel/core": "^7.24.7",
+		"@babel/preset-env": "^7.24.7",
+		"@commitlint/cli": "^19.3.0",
+		"@commitlint/config-conventional": "^19.2.2",
+		"@rollup/plugin-babel": "^6.0.4",
+		"@rollup/plugin-json": "^6.1.0",
+		"@rollup/plugin-terser": "^0.4.4",
+		"@typescript-eslint/eslint-plugin": "^6.21.0",
+		"eslint": "^8.57.0",
+		"eslint-config-standard-with-typescript": "^43.0.1",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-n": "^16.6.2",
+		"eslint-plugin-promise": "^6.2.0",
+		"husky": "^8.0.0",
+		"lint-staged": "^15.2.7",
+		"rimraf": "^5.0.7",
+		"rollup": "^4.18.0",
+		"typescript": "^5.5.2",
+		"vitest": "^1.6.0"
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint --fix"
+		]
+	}
+}
